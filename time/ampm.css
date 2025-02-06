@@ -1,0 +1,9 @@
+@keyframes ampm{
+    50%{
+        content: 'AM';
+    }
+
+    100%{
+        content: 'PM';
+    }
+}

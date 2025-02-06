@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clock{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 850px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.clock-wrap{
+    border: 10px solid #313030;
+    border-radius: 15px;
+    min-height: 250px;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #464a49;
+    padding: 5px;
+}
+
+.clock-field{
+    padding: 5px 0;
+    border-radius: 80px;
+    background: #404040;
+    box-shadow: 0 0 5px 5px #ffffff29 inset;
+    color: #fff;
+    flex-basis: 20%;
+    text-align: center;
+    font-size: 70px;
+}
+
+.clock-field.second::before{
+    content: '54';
+    animation: second 60s infinite;
+    animation-delay: 1s;
+}
+
+.clock-field.minute::before{
+    content: '58';
+    animation: minute 3600s infinite;
+    animation-delay: -11.3s;/*-17.3s is nutral*/
+}
+
+.clock-field.hour::before{
+    content: '11';
+    animation: hour 43200s infinite;
+    animation-delay: -989.6s;/* -1055.6s neutral */
+}
+
+.clock-field.ampm::before{
+    content: 'PM';
+    animation: ampm 86400s infinite;
+    animation-delay: -12604.3s;/* -12670.3s neutral */
+}
