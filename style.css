@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    padding: 0 4px;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
 }
 
 .clock{
@@ -12,6 +20,31 @@
     width: 850px;
     max-width: 100%;
     margin: auto;
+}
+
+.clock .app-wrap{
+    width: 100%;
+}
+
+.clock .app-wrap .links{
+    margin-bottom: 20px;
+}
+
+.clock .app-wrap .links a{
+    font-size: 24px;
+    border: 2px solid #313030;
+    border-radius: 30px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #313030;
+    font-weight: 700;
+    box-shadow: 0 0 5px 5px #ffffff29 inset;
+    transition: .2s ease-in;
+}
+
+.clock .app-wrap .links a:hover{
+    background: #464a49;
+    color: #fff;
 }
 
 .clock-wrap{
@@ -59,4 +92,26 @@
     content: 'PM';
     animation: ampm 86400s infinite;
     animation-delay: -12604.3s;/* -12670.3s neutral */
+}
+
+
+@media only screen and (max-width: 768px){
+    .clock-wrap{
+        min-height: 200px;
+    }
+
+    .clock-field{
+        font-size: 42px;
+    }
+}
+
+@media only screen and (max-width: 575px){
+    .clock-field{
+        font-size: 28px;
+    }
+    
+    .clock .app-wrap .links a{
+        font-size: 14px;
+        padding: 5px 10px;
+    }
 }
